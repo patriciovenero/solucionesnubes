@@ -1,0 +1,22 @@
+<!-- Mostrar las 10 películas con más ratings -->
+<h2>Top 10 Películas con Más Ratings</h2>
+<table class="table">
+  <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Puntuación</th>
+        <th scope="col">Tiempo de duracion</th>
+        <th scope="col">Usuario</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% topRatings.forEach(rating => { %> <!-- Cambiado de 'movie' a 'rating' -->
+      <tr>
+        <td><%= rating.userId %></td>
+        <td><%= rating.rating %></td>
+        <td><%= rating.timestamp %></td>            
+        <td><%= rating.movieId %></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
